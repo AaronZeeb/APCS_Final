@@ -1,13 +1,8 @@
-
+//Aaron Zeeb
+//Title screen for the game
 import java.awt.*;
 import javax.swing.*;
-
-/**
- * Class Title - write a description of the class here
- * 
- * @author (your name) 
- * @version (a version number)
- */
+import java.awt.Font;
 public class Title extends JApplet
 {
     // instance variables - replace the example below with your own
@@ -18,7 +13,14 @@ public class Title extends JApplet
     }
 
     public void paint(Graphics g) {
-        g.drawImage(TitleScreen, 100, 100, this);
+        //draws the title screen image
+        g.drawImage(TitleScreen, 0, 0, this);
+        
+        g.setColor(Color.red);
+        g.setFont(new Font("TimesRoman", Font.PLAIN, 30));
+        g.drawString("Title", 500, 325);
+        g.setFont(new Font("TimesRoman", Font.PLAIN, 30));
+        g.drawString("created by Aaron Zeeb, Nick Litman, Alex Yang", 500, 350);
     }
 
     /**
@@ -43,23 +45,7 @@ public class Title extends JApplet
         // provide any code that needs to be run when page
         // is replaced by another page or before JApplet is destroyed 
     }
-    /**
     
-     Paint method for applet.
-     
-     @param  g   the Graphics object for this applet
-    
-    public void paint(Graphics g)
-    {
-        // simple text displayed on applet
-        g.setColor(Color.white);
-        g.fillRect(0, 0, 200, 100);
-        g.setColor(Color.black);
-        g.drawString("Sample Applet", 20, 20);
-        g.setColor(Color.blue);
-        g.drawString("created by BlueJ", 20, 40);
-    }
-    **/
     /**
      * Called by the browser or applet viewer to inform this JApplet that it
      * is being reclaimed and that it should destroy any resources that it
