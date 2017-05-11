@@ -1,16 +1,8 @@
-//Aaron Zeeb
-//Title screen for the game
-//import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.*;
 import javax.swing.*;
-import java.awt.Font;
-public class Title extends JApplet
+public class ImageViewer extends JApplet
 {
     Image TitleScreen;
-    Color myColor;
-    Color myColor2;
     public void init() {
         //TitleScreen = getImage(getDocumentBase(), getParameter("title.jpg"));
         TitleScreen=getImage(getDocumentBase(),"title.jpg");
@@ -18,33 +10,8 @@ public class Title extends JApplet
 
     public void paint(Graphics g) {
         //draws the title screen image
-        Graphics2D g2 = (Graphics2D) g;
-        g2.drawImage(TitleScreen, 0, 0, this);
-        //g2.fill(TitleScreen);
-        
-        Graphics2D g3 = (Graphics2D) g;
-        g2.setColor(myColor);
-        g2.setFont(new Font("TimesRoman", Font.BOLD, 30));
-        g2.drawString("Title", 484, 384);
-        g2.setFont(new Font("TimesRoman", Font.PLAIN, 30));
-        g2.drawString("Created by Nick Litman, Aaron Zeeb, Alex Yang", 204, 410);
-        
-        
+        g.drawImage(TitleScreen, 0, 0, this);
     }
-    
-    /**
-     * Animate the title screen by updating the objects such that they appear to be animated when they are next drawn.
-     *
-     */
-    public void nextFrame(int time)
-    {
-        if(time%2==0)
-            myColor=(Color.yellow);
-        else
-            myColor=(Color.red);
-        repaint();
-    }
-
     /**
      * Called by the browser or applet viewer to inform this JApplet that it 
      * should start its execution. It is called after the init method and 
@@ -67,7 +34,7 @@ public class Title extends JApplet
         // provide any code that needs to be run when page
         // is replaced by another page or before JApplet is destroyed 
     }
-    
+
     /**
      * Called by the browser or applet viewer to inform this JApplet that it
      * is being reclaimed and that it should destroy any resources that it
