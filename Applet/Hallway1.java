@@ -9,7 +9,7 @@ public class Hallway1 extends JApplet
     Image Hallway1;
     public void init() {
         //grabs the image file from the folder
-        Hallway1=getImage(getDocumentBase(),"hallway1.jpg");
+        Hallway1=getImage(getDocumentBase(),"hallway.jpg");
     }
 
     public void paint(Graphics g) {
